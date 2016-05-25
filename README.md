@@ -11,3 +11,5 @@
 - Created browsecatalog.jsp with search bar, sign out button and used bootstrap tabs to implement a categorized tabbed view of movies according to their genre.
 
 ![alt tag](http://i68.tinypic.com/2q8bjic.jpg)
+
+**(yet to add media-query styling)**
