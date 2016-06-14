@@ -1,0 +1,101 @@
+@CHARSET "ISO-8859-1";
+
+html, body {
+	min-height: 100%;
+}
+
+::selection {
+	text-shadow: none;
+	background: #fcfcfc;
+	background: rgba(255, 255, 255, .2);
+}
+
+.form-group {
+	padding-top: 10px;
+	padding-right: 5px;
+}
+
+img::selection {
+	background: 0 0;
+}
+
+footer {
+	text-align: center;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	padding-top: 20px;
+	bottom: 0px;
+	height: 50px;
+	background-color: #e3e3e3;
+	line-height: 1;
+	left: 0;
+	position: absolute;
+	right: 0;
+	bottom: 0px;
+}
+
+footer p {
+	margin: 0;
+}
+
+@media ( max-width :1199px) {
+}
+
+@media ( max-width :767px) {
+}
+
+.main {
+	background-color: black;
+}
+
+ul.movies li {
+	width: 200px;
+	height: 300px;
+	padding: 30px;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: top;
+	*display: inline;
+	*zoom: 1;
+	display: inline-block;
+	text-align: center;
+}
+
+ul.movies li img {
+	height: 100%;
+	width: auto;
+}
+
+.spanClass {
+	position: fixed;
+	padding : 10px;
+	background-color: #e5e5e5;
+	/*left: -1000px;*/
+	border: 1px solid #666;
+	visibility: hidden; 
+	border-radius: 25px;
+	color : black;
+    top: 50%;
+    margin-top: -200px;
+    width: 200px;
+	color: black;
+	z-index: 2000;
+	text-align: left;
+}
+
+ul.movies li:hover span { /*CSS for enlarged image on hover*/
+	visibility: visible; 
+	opacity: 0.94;
+	/*position where enlarged image should offset horizontally */
+}
+
+.information {
+	float: left;
+}
+
+.my-tab {
+	min-height: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: #e3e3e3;
+}

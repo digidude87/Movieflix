@@ -1,0 +1,66 @@
+<div ng-controller="BrowseCatalogController as bVm">
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="title navbar-brand" href="#"
+					style="color: red; font-size: 24px">MovieFlix&nbsp;&nbsp;&nbsp;&nbsp;</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<form>
+					<ul class="nav navbar-nav">
+						<li class="active"><div class="form-group">
+								<input type="text" class="form-control" placeholder="Search"
+									style="width: 100%;" ng-model="bVm.searchText">
+							</div></li>
+					</ul>
+				</form>
+				<form>
+
+					<ul class="nav navbar-nav navbar-right">
+						<li><a>Welcome User</a></li>
+						<li>
+							<div class="form-group">
+								<button ng-click="bVm.logout()" class="btn btn-default">Logout</button>
+							</div>
+						</li>
+					</ul>
+
+				</form>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<ul class="movies">
+			<div ng-repeat="movie in bVm.movies| filter:bVm.searchText"
+				style="display: inline">
+				<li><a target="_blank"
+					ng-href="http://www.imdb.com/title/{{movie.imdbID}}"><img
+						ng-src="{{movie.Poster}}"><span class="spanClass"><center style="font-size:22px;"><b>{{movie.Title}}</b></center> <hr> 
+						<b>Director : </b>{{movie.Director}}<br>
+						<b>Genre : </b>{{movie.Genre}}<br>
+						<b>Language : </b>{{movie.Language}}<br>
+						<b>Rated : </b>{{movie.Rated}}<br>
+						<b>Released : </b>{{movie.Released}}<br>
+						<b>Runtime : </b>{{movie.Runtime}}<br>
+						<b>Year : </b>{{movie.Year}}<br>
+						<b>Imdb Rating : </b>{{movie.imdbRating}}</span></a></li>
+			</div>
+		</ul>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12" style="height: 50px;"></div>
+		</div>
+	</div>
+	<div class="container">
+		<footer class="navbar-fixed-bottom">
+			Copyright&copy;AbhiVerma2016 </footer>
+	</div>
+</div>

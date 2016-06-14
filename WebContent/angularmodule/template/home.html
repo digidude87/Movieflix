@@ -1,0 +1,97 @@
+
+<script type="text/javascript">
+	//The following script is for the group 2 navigation buttons.
+	function switchAutoAdvance() {
+		imageSlider.switchAuto();
+	}
+</script>
+<div ng-controller="IndexController as iVm">
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="title navbar-brand" href="#"
+					style="color: red; font-size: 24px">MovieFlix&nbsp;&nbsp;&nbsp;&nbsp;</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="username"
+								ng-model="iVm.ulogin"></input>
+						</div>
+					</li>
+					<li>
+						<div class="form-group">
+							<input type="password" class="form-control"
+								placeholder="password" ng-model="iVm.pass">
+						</div>
+					</li>
+					<li>
+						<div class="form-group">
+							<button ng-click="iVm.login()" class="btn btn-default">Login</button>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container" style="margin-top: 20px;">
+		<div id="sliderFrame">
+			<div id="slider">
+				<img src="angularmodule/images/img1.png" /> <img
+					src="angularmodule/images/img2.png" /> <img
+					src="angularmodule/images/img3.png" /> <img
+					src="angularmodule/images/img4.png" />
+			</div>
+			<!-- Custom navigation buttons on both sides -->
+			<div class="group1-Wrapper">
+				<a onclick="imageSlider.previous()" class="group1-Prev"></a> <a
+					onclick="imageSlider.next()" class="group1-Next"></a>
+			</div>
+			<!-- nav bar -->
+			<div style="text-align: center; padding: 20px; z-index: 20;"></div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8">
+				<div class="jumbotron" style="height: 430px; overflow: auto;">
+					<h1>MovieFlix</h1>
+					<p>Some Description....</p>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="jumbotron" style="height: 430px; overflow: auto;">
+					<h3>Create An Account</h3>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="username" ng-model='uname'></input><br>
+						<input type="password" class="form-control" placeholder="password" ng-model= 'upass'></input><br>
+						<input type="password" class="form-control"
+							placeholder="confirm password" ng-model= 'confpass' ></input><br> <input
+							type="email" class="form-control" placeholder="E-mail address" ng-model='email'></input><br>
+						<button ng-click="iVm.register()" class="btn btn-default">Sign
+							Up</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12" style="height: 50px;"></div>
+		</div>
+	</div>
+	<div class="container">
+		<footer class="navbar-fixed-bottom">
+			Copyright&copy;AbhiVerma2016 </footer>
+	</div>
+</div>
